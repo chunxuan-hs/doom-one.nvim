@@ -268,9 +268,21 @@ doom_one.set_colorscheme = function()
 	set_hl("DiffModifiedGutterLineNr", { fg = palette.grey })
 	set_hl("DiffRemovedGutterLineNr", { fg = palette.grey })
 
+	-- Used by diff mode (see `:help diff-mode`)
 	set_hl("DiffAdd", { link = "DiffAddedGutter" })
 	set_hl("DiffChange", { link = "DiffModifiedGutter" })
 	set_hl("DiffDelete", { link = "DiffRemovedGutter" })
+
+	-- Used by diff filetype (see `$VIMRUNTIME/syntax/diff.vim`)
+	set_hl("diffAdded", { fg = palette.green, bg = palette.bg_alt })
+	set_hl("diffChanged", { fg = palette.violet })
+	set_hl("diffRemoved", { fg = palette.red, bg = palette.base3 })
+	set_hl("diffLine", { fg = palette.violet })
+	set_hl("diffIndexLine", { fg = palette.cyan })
+	set_hl("diffSubname", { fg = palette.cyan })
+	set_hl("diffFile", { fg = palette.cyan })
+	set_hl("diffOldFile", { fg = palette.blue })
+	set_hl("diffNewFile", { fg = palette.blue })
 
 	--- Markdown
 	------------
@@ -417,7 +429,7 @@ doom_one.set_colorscheme = function()
 		vim.g.terminal_color_12 = palette.blue
 		vim.g.terminal_color_13 = palette.violet
 		vim.g.terminal_color_14 = palette.cyan
-		vim.g.terminal_color_15 = palette.white
+		vim.g.terminal_color_15 = palette.base8
 		vim.g.terminal_color_background = palette.bg_alt
 		vim.g.terminal_color_foreground = palette.fg_alt
 	end
